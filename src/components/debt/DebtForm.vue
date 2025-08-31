@@ -3,7 +3,6 @@ import { Label } from '@/components/ui/label'
 import { Input, InputRupiah } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import type { DebtForm } from '@/types/models.ts'
-import {Calendar} from '@/components/ui/calendar'
 import { reactive, ref, watch } from 'vue'
 import { LoaderCircle } from 'lucide-vue-next'
 
@@ -68,7 +67,6 @@ watch(balanceRaw, (val) => {
   formData.amount = parseInt(val || '0')
 })
 
-const selectedDate = ref<Date | undefined>()
 </script>
 
 <template>
@@ -134,8 +132,6 @@ const selectedDate = ref<Date | undefined>()
           v-model="formData.due_date"
           placeholder="Enter Budget Description..."
         />
-         <Calendar v-model="selectedDate" class="p-3 rounded-md border shadow" />
-         <p v-if="selectedDate">Tanggal dipilih: {{ selectedDate.toDateString() }}</p>
         <!--        <InputError :message="formData.errors.name" />-->
       </div>
 

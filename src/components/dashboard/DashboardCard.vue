@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { Label } from '@/components/ui/label';
-import { onMounted, ref, watch, computed } from 'vue';
-import {Calendar} from '@/components/ui/calendar'
+import { onMounted, ref, watch } from 'vue';
 import {
   getAvgSpending,
   getCashFlow,
@@ -98,6 +97,7 @@ watch(selectedMonth, loadAllData, { immediate: true })
 onMounted(() => {
  loadAllData()
 })
+
 
 </script>
 

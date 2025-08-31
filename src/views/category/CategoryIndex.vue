@@ -42,8 +42,8 @@ onMounted(loadCategories)
       <div class="flex justify-end px-2">
         <Button @click="newCategory" >New Category</Button>
       </div>
-      <div class="relative  rounded-xl border border-sidebar-border/70 md:min-h-min dark:border-sidebar-border">
-        <div class="relative min-h-[100vh] flex-1 rounded-xl border border-sidebar-border/70 md:min-h-min dark:border-sidebar-border">
+      <div class="relative  rounded-xl md:min-h-min">
+        <div class="relative min-h-[100vh] flex-1 rounded-xl">
           <CategoryTable :categories="categories" @success="loadCategories" />
         </div>
       </div>

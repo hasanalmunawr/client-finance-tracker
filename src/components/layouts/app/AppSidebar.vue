@@ -13,7 +13,7 @@ import {
 } from '@/components/ui/sidebar'
 import { type NavItem } from '@/types'
 import { RouterLink } from 'vue-router'
-import { LayoutGrid, ArrowLeftRight, CreditCard, Layers, BadgeDollarSign, Calculator } from 'lucide-vue-next'
+import { LayoutGrid, ArrowLeftRight, CreditCard, Layers, BadgeDollarSign, Calculator, Monitor } from 'lucide-vue-next'
 import AppLogo from '@/components/icons/AppLogo.vue'
 
 const mainNavItems: NavItem[] = [
@@ -31,6 +31,11 @@ const mainNavItems: NavItem[] = [
     title: 'Bank Account',
     href: '/bank-account',
     icon: CreditCard,
+  },
+  {
+    title: 'Asset',
+    href: '/asset',
+    icon: Monitor,
   },
   {
     title: 'Budget',

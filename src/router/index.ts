@@ -8,6 +8,7 @@ import VerifyEmailView from '@/views/auth/VerifyEmailView.vue'
 import DashboardView from '@/views/DashboardView.vue'
 import TransactionView from '@/views/transaction/TransactionIndex.vue'
 import BankAccountView from '@/views/bankAccount/BankAccountIndex.vue'
+import AssetView from '@/views/asset/AssetIndex.vue'
 import CategoryView from '@/views/category/CategoryIndex.vue'
 import BudgetView from '@/views/budget/BudgetIndex.vue'
 import DebtView from '@/views/debt/DebtIndex.vue'
@@ -44,6 +45,12 @@ const router = createRouter({
       path: '/bank-account',
       name: 'bank-account',
       component: BankAccountView,
+      meta: { requiresAuth: true }
+    },
+    {
+      path: '/asset',
+      name: 'asset',
+      component: AssetView,
       meta: { requiresAuth: true }
     },
     {
